@@ -14,7 +14,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #a79c9c;
     /* Белый цвет для области калькулятора */
 }
 
@@ -25,17 +25,19 @@ body {
     font-size: 24px;
     border: none;
     border-radius: 5px;
-    background-color: #ecf0f1;
+    background-color: #bcccb2;
     /* цвет для дисплея */
+    box-shadow: inset 0 0 10px 5px rgba(0,0,0,0,2);
 }
 
 .buttons {
     display: grid;
-    border: 1px solid #3498db;
+    border: 1px solid #272a2c;
     /* Синий цвет для рамки кнопок */
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0,3);
 
 }
 
@@ -48,6 +50,7 @@ button {
     color: #ffffff;
     /* Белый текст на кнопках */
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 button.memory {
@@ -62,12 +65,9 @@ button.memory {
 
 /* Стили для кнопок, не добавляющих цифры на дисплей (операторы, MS, MR) */
 button:not([onclick^="appendToDisplay"]) {
-    background-color: #34495e;
+    background-color: #2a66a3;
     /* Темно-синий цвет для этих кнопок */
 }
-
-/* Стили для кнопок, добавляющих цифры на дисплей (цифры, точка) */
-button[onclick^="appendToDisplay"] {
-    background-color: #3498db;
-    /* Синий цвет для этих кнопок */
+button.function {
+    background-color: #e06a0f;
 }

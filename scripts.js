@@ -3,8 +3,11 @@ let container = document.querySelector(".buttons");
 symbols.map((value) => {
     let el = document.createElement('button');
     el.textContent = value;
+    if (value === 'C'|| value === "MS"|| value === "MR"|| value === "M+" || value === "M-" || value === "MRC" ) {
+        el.classList.add('function')
+    }
     container.appendChild(el);
-    el.addEventListener('click', () => {
+    el.addEventListener('click', function() {
         switch (value) {
             case 'C': clearScreen();
             break;
@@ -32,7 +35,6 @@ symbols.map((value) => {
         }
     })
 })
-
 
 let display = document.getElementById("display");
 let memory;
